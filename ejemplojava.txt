@@ -1,0 +1,107 @@
+package fraction;
+
+public class Fraccion {
+	private int num;
+	private int den;
+	public Fraccion(){
+		num = 0;
+		den = 0;
+	}
+	public Fraccion(int num, int den) {
+		this.num = num;
+		this.den = den;
+	}
+	
+	public static Fraccion sumar(Fraccion a, Fraccion b){
+		Fraccion  c =  new Fraccion();
+		c.num = a.num * b.den + b.num * a.den;
+		c.den = a.den * b.den;
+		return c;
+	}
+	
+	public static Fraccion restar(Fraccion a, Fraccion b){
+		  Fraccion c=new Fraccion();
+		  c.num=a.num*b.den-b.num*a.den;
+		  c.den=a.den*b.den;
+		  return c;
+	}
+	
+	public static Fraccion multiplicar(Fraccion a, Fraccion b){
+		return new Fraccion(a.num*b.num, a.den*b.den);
+	}
+	
+	public static Fraccion dividir(Fraccion a, Fraccion b){
+		Fraccion  c =  new Fraccion();
+		c.num = a.num * b.den / b.num * a.den;
+		c.den = a.den * b.den;
+		return c;
+	}
+	
+	
+	public String mostrar(){
+		String texto = num +"  /  "+den;
+		return texto;
+	}
+	
+}
+
+
+
+
+
+package fraction;
+import java.util.*;
+public class principal {
+
+	public static void main(String[] args) {
+		Scanner leer = new Scanner(System.in);
+		Fraccion x = new Fraccion(), y = new Fraccion();
+		
+		int op;
+		do{
+			System.out.println("0 Salir");
+			System.out.println("1 leer fracciones");
+			System.out.println("2 Mostrar fracciones");
+			System.out.println("3 sumar fracciones");
+			System.out.println("4 resta fracciones");
+			System.out.println("5 divicion  fracciones");
+			System.out.println("6 multiplicacion fracciones");
+			System.out.println("Option");
+			op = leer.nextInt();
+			switch(op){
+				case(1): 
+					System.out.println("Numerador x: ");
+					int numerador = leer.nextInt();
+					System.out.println("Denomidador x: ");
+					int denomidador = leer.nextInt();
+					x = new Fraccion(numerador, denomidador);
+					System.out.println("NUmerador y: ");
+					numerador = leer.nextInt();
+					System.out.println("Numerador y: ");
+					numerador = leer.nextInt();
+					y = new Fraccion(numerador, denomidador);
+					break;
+				case(2): 
+					System.out.println("VECTOR a: ");
+					System.out.println("X = "+ x.mostrar());
+					System.out.println("Y = "+ y.mostrar());
+					break;
+				case(3): 
+					System.out.println("x + y: "+ Fraccion.sumar(x,y).mostrar());
+					break;
+				case(4): 
+					System.out.println("x + y: "+ Fraccion.restar(x,y).mostrar());
+					break;
+				case(5): 
+					System.out.println("x + y: "+ Fraccion.dividir(x,y).mostrar());
+					break;
+				case(6): 
+					System.out.println("x + y: "+ Fraccion.multiplicar(x,y).mostrar());
+					System.out.println("");
+					System.out.println("");
+					break;
+			}
+		}while(op!=0);
+	}
+}
+
