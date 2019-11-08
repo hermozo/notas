@@ -1,0 +1,27 @@
+LISTADO DE PRODUCTOS
+adicionar en nombred el gro en listar productos
+adicionar filtro por grupo y por el nombre del grupo
+quitar el nombre pequeño
+
+
+DETALLE DEL PRODUCTOS 
+almacen y el stock en el almacen 
+el nombre del grupo 
+descuentos con los ue cuenta el producto 
+ver si la imagen se encuentra 
+adicionar infinito scroll
+
+
+OFERTAS
+revisar la relacion qu existe entre lista de precio y el producto
+problemas al adicionar 
+controlar el stock con la cantidad 
+control de copia o duplicacion de documentos 
+los descuentos seran por linea 
+ 
+
+
+
+de = d especial
+dg = d grupo 
+dpc = periodo y cantidad 
